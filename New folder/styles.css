@@ -1,0 +1,114 @@
+.doorframe {
+  
+  background: #fff url() no-repeat 50%;
+  background-size: cover;
+  border: 2px solid brown;
+  border-right: hidden;
+  border-top: hidden;
+  border-bottom: hidden;
+  display: flex;
+  height: 263px;
+ 
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  width: 130px;
+}
+.center-container {
+
+  position: relative;
+    height: 100vh;
+}
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+}
+.doorframe1 {
+  
+  background: #fff url() no-repeat 50%;
+  background-size: cover;
+  border: 2px solid brown;
+  border-left: hidden;
+  border-top: hidden;
+  border-bottom: hidden;
+  display: flex;
+  height: 263px;
+  
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  width: 130px;
+}
+
+
+  
+  .door {
+    background: darkred url(/assets/LeftDoor.png) no-repeat 50%;
+    
+    background-size: 100% 100%;
+    flex-grow: 1;
+    position: relative;
+    transform-origin: left center;
+    transition: all 1.5s;
+}
+   
+  
+  .door1 {
+    background: darkred url(/assets/RightDoor.png) no-repeat 50%;
+    background-size: 100% 100%;
+    
+    flex-grow: 1;
+    position: relative;
+    transform-origin: right center;
+    transition: all 1.5s;
+}
+   
+
+
+  .door:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+
+  }
+
+  .door1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+
+  }
+  
+  .doorframe:focus .door,
+  .doorframe:hover .door {
+    transform: rotate3d(0, 1, 0, -130deg);
+  }
+  
+  .doorframe1:focus .door1,
+  .doorframe1:hover .door1 {
+    transform: rotate3d(0, 1, 0, 130deg);
+  }
+  body{
+      background:  black url(/assets/mountain.jpg) no-repeat ;
+      background-size: cover;
+      transition: opacity 0.5s ease; 
+      opacity: 1; 
+      
+  
+      
+  }
+
+ 
